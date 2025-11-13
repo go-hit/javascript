@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>String Operations</p>
+    </div>
+    <script>
+        let first_name = "Jane"
+        let second_name = "Doe"
+        let full_name = first_name.concat(" ", second_name)
+
+        let full_name2 = first_name + " " + second_name
+
+        console.log(full_name)
+        console.log(full_name2)
+        //template literals
+        console.log(`My name is ${full_name}`)
+        //accessing characters
+        console.log(first_name[1])
+        //length
+        let sentence = "My dog died today"
+        console.log(sentence.length)//17 letters including spaces are counted
+
+        //slice
+        let a="abcdef"
+        console.log(a.slice(0,2))
+        console.log(a.slice(3))
+        console.log(a.slice(-4))//cdef
+
+        //includes
+        const fruits = ["Apple", "Banana", "Orange"];
+        let hasBanana = fruits.includes("Banana"); // true
+        let hasGrape = fruits.includes("Grape");   // false
+        console.log(hasBanana)
+        console.log(hasGrape)
+        console.log(fruits.includes("Orange"))//its k sensitive if the 'O' is in lowercase will bring false
+
+        //replace
+        let value="hello"
+        let new_val=value.replace("hello","hi")
+        console.log(new_val)
+
+        //trim
+        let lang="  Javascript.  "
+        console.log(lang.trim())//removes the spaces
+        console.log(lang)
+    </script>
+</body>
+
+</html>

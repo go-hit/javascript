@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Taking user inputs</p>
+    </div>
+    <script>
+        let name=prompt("Enter your name: ")
+        console.log(name)
+        console.log(typeof(name))
+
+        //the 2 user inputs
+        let num1=parseFloat(prompt("Enter 1st number: "))
+        let num2=parseFloat(prompt("Enter 2nd number: "))
+        //their calculations
+        let sum=num1+num2
+        let subtraction=num1-num2
+        let modulus=num1%num2
+        let exponent=num1**num2
+        //their outputs
+        console.log(`Sum = ${sum}`)
+        console.log(`Subtraction = ${subtraction}`)
+        console.log(`Modulus = ${modulus}`)
+        console.log(`Exponent = ${exponent}`)
+    </script>
+</body>
+</html>

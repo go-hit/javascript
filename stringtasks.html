@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>strings tasks</p>
+    </div>
+    <script>
+        let f_name = "JOHn"
+        console.log(f_name.toLowerCase())
+
+        let sentence1 = "The Dog Breed is German Shephard"
+        console.log(sentence1.slice(8, 23))
+        let sentence2 = "Defeats for the Clinton forces, this was her moment of triumph"
+        console.log(sentence2.slice(16, 30))
+
+        let sent = "The lazy dog; ran so fast; it hit the wall."
+        console.log(sent.length)
+
+        let email = "gody@gmail.com"
+        console.log(email.includes("@gmail.com"))
+
+        let number = ["+254712345678", "254712345678", "0712345678", "712345678", "0112345678", "112345678"]
+        let number1 = number.includes("254")
+        let number2 = number.includes("+254")
+        let number3 = number.includes("07")
+        let number4 = number.includes("01")
+        console.log(number1)
+        console.log(number2)
+        console.log(number.includes("254712345678"))
+
+        let phonenum = "+254712345678"
+        console.log(phonenum.startsWith("+254"))
+
+
+        let phone_number = prompt("Enter a phone number")
+        console.log(
+            (phone_number.slice(0, 4) == "+254" && phone_number.length == 13) ||
+            (phone_number.slice(0, 3) == "254" && phone_number.length == 12) ||
+            (phone_number.slice(0, 2) == "07" && phone_number.length == 10) ||
+            (phone_number.slice(0, 2) == "01" && phone_number.length == 10) ||
+            (phone_number[0] == "7" && phone_number.length == 9) ||
+            (phone_number[0] == "1" && phone_number.length == 9)
+        )
+        // const numba=prompt("Enter a number: ")
+        // if (numba>=0){
+        //     console.log(numba.startsWith("2"))
+        // }
+
+
+    </script>
+</body>
+
+</html>
