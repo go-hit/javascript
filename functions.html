@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>functions</p>
+    </div>
+    <script>
+        function add() {
+            let a = 12
+            let b = 10
+            return a + b
+
+        }
+        sum= add()
+        console.log(sum)
+
+        function sum_numbers(x,y){
+            return x+y
+        }
+        sum1=sum_numbers(1,4)
+        sum2=sum_numbers(5,5)
+        console.log(sum1)
+
+        
+        let number=Number(prompt("Enter number"))
+        function check_even(num){
+            if(num%2==0){
+                result='even'
+            }else{
+                result='odd'
+            }
+            return result
+        }
+        even=check_even(number)
+        console.log(even)
+    </script>
+</body>
+
+</html>

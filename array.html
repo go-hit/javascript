@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>arrays</p>
+    </div>
+    <script>
+        let values = [1,2,3,"four","five",true,[6,7,"eight"]]
+        console.log(values)
+        console.log(typeof(values))//array object
+        console.log(Array.isArray(values))//returns a boolean if its an array
+        console.log(values[3])//"four"
+        console.log(values[6][2])//"eight"
+
+        //updating arrays - use indexing
+        let names=["Bob","Alice","Joyce"]
+        names[2]="jack"
+        console.log(names)
+
+        //adding items - at the end
+        names.push("Mike","Jane")
+        console.log(names)
+
+        //adding - at beginning
+        names.unshift("Gody","Jessica")
+        console.log(names)
+
+        //removes last item
+        names.pop(names)
+        console.log(names)
+
+        //removes first item
+        names.shift()
+        console.log(names)
+
+        
+        //splice - used to change contents by removing or replacing
+        let data =[100,200,"four"]
+        data.splice(2,0,300,"five")
+        console.log(data)
+
+        data.splice(2,2,"six",true)//replacing
+        console.log(data)
+
+        //indexof - used to find occurrence of specified value
+        let numbas=[1,2,3,3,3,4,5]
+        console.log(numbas.indexOf(3))//2
+        console.log(numbas.lastIndexOf(3))//4
+
+        //sort
+        let x=[100,11,2,3]
+        console.log(x.sort())//compares character after character
+
+        //reverse
+        let y=["james","john","jack"]
+        console.log(y.reverse())
+
+        //join
+        let shoes=["big","small","medium"]
+        console.log(shoes.join('*'))
+
+        //tostring - combine strings together to make one string
+        console.log(shoes.toString())//"big,small,medium"
+
+        //at
+        console.log(shoes.at(-1))//medium
+        //copywithin
+        let arr=[100,200,300,400,500]
+        console.log(arr.copyWithin(1,2,4))
+
+        //slice
+        let c=[12,13,14,15,16]
+        console.log(c.slice(1,4))//13,14,15
+
+        //spread operator - to copy arrays
+        let arr1=[10,20,30]
+        let arr2=[...arr1]
+        console.log(arr2)//[10,20,30]
+        //spread - merge arrays
+        let i=["py","Js"]
+        let j=["Html","css"]
+        let k=[...i,...j,"php"]
+        console.log(k)//spread here works same like concat
+
+        //rest
+        let array=[100,200,300,400,500]
+        let [a,b,...other_elements]=array
+        console.log(a)//100
+        console.log(b)//200
+        console.log(other_elements)//300,400,500
+    </script>
+</body>
+</html>

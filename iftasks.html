@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>if tasks</p>
+    </div>
+    <script>
+        // let math=Number(prompt("Enter maths score"))
+        // let eng=Number(prompt("Enter english score"))
+        // let sci=Number(prompt("Enter science score"))
+
+        // let average=(math+eng+sci)/3
+        // if (average>=80){
+        //     console.log(`Grade= A`)
+        // }else if (average>=70 && average,80){
+        //     console.log(`Grade= B`)
+        // }else if (average>=60 && average<70){
+        //     console.log(`Grade = C`)
+        // }else if (average>=50 && average<60){
+        //     console.log(`Grade = D`)
+        // }else{
+        //     console.log(`Grade = E`)
+        // }
+
+        //1
+        let word = prompt("Enter anything")
+        let lth = word.length
+        if (lth == 0) {
+            console.log("Empty")
+        } else if (lth >= 1 && lth <= 5) {
+            console.log("Short")
+        } else if (lth >= 6 && lth <= 10) {
+            console.log("Medium")
+        } else {
+            console.log("Long")
+        }
+
+        //2
+        let age = Number(prompt("Enter your age"))
+        if (age <= 12) {
+            console.log("Ticket price 5/=")
+        } else if (age > 12 && age < 18) {
+            console.log("Ticket price 10/=")
+        } else if (age < 60 && age >= 18) {
+            console.log("Ticket price 20/=")
+        } else {
+            console.log("Ticket price 15/=")
+        }
+
+        //3
+        // let amount=Number(prompt("Enter amount"))
+        // let discount=0
+        // if (amount>=100){
+        //     discount=0.20
+        // }else if (amount>=50){
+        //     discount=0.10
+        // }else{
+        //     discount=0
+        // }
+        // let discamount=amount*discount
+        // let finalprice=amount-discamount
+
+        // console.log(`discount amount is ${discamount}`)
+        // console.log(`Final price is ${finalprice}`)
+
+        //4
+        let val = (prompt("Enter a number"))
+        if (val === Number || val === String) {
+            console.log("match")
+        } else {
+            console.log("doesn't match")
+        }
+
+        //5
+        let any = prompt("Enter any string or number value")
+        if (any === "") {
+            console.log("Empty")
+        } else if (!isNaN(Number(any))) {
+            console.log("number")
+        } else {
+            console.log("Text")
+        }
+
+        //9
+        let value = prompt("Enter a value")
+
+        if (typeof (Number(value)) != "number") {
+            console.log("Not a number-input numbers only")
+        } else if ((value.slice(-1)) % 3 == 0) {
+            console.log("Last digit divisible by 3")
+        } else {
+            console.log("Last digit not divisible by 3")
+        }
+    </script>
+</body>
+
+</html>

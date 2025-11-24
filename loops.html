@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>loops</p>
+    </div>
+    <script>
+        //display numbers from 1 to 20
+        for (i = 1; i <= 20; i++) {
+            console.log(i)
+        }
+
+        //looping thro an array
+        const fruits = ["apple", "banana", "orange", "peach", "pineapple"]
+        for (i = 0; i < fruits.length; i++) {
+            console.log(fruits[i])
+        }
+        //skip an element 
+        for (i = 0; i < fruits.length; i += 2) {
+            console.log(fruits[i])
+        }
+
+        //looping backwards - from 10 to 1
+        for (i = 10; i > 0; i--) {
+            console.log(i)
+        }
+        //looping backwards 
+        for (i = (fruits.length - 1); i >= 0; i--) {
+            console.log(fruits[i])
+        }
+        let reversed = []
+        for (i = (fruits.length - 1); i >= 0; i--) {
+            reversed.push(fruits[i])
+        }
+        console.log(reversed)//['pineapple', 'peach', 'orange', 'banana', 'apple']
+
+        //display 1-10 using while loop
+        num = 1
+        
+        while (num <= 10) {
+            console.log(num)
+            num++
+        }
+        //adding numbers from 1 to 10
+        let sum = 0;
+        let p = 1;
+
+        while (p <= 10) {
+            sum += p;
+            p++;
+        }
+
+        console.log(sum);  // Output: 55
+
+
+        //Nested loops
+        let attributes = ["Electric", "Fast"];
+        let cars = ["Tesla", "Porsche"];
+
+        for (let attribute of attributes) { // Outer loop
+            for (let car of cars) { // Inner loop
+                console.log(attribute, car);
+            }
+        }
+
+        for (i=1; i<=5; i++){
+            for (j=1; j<=5; j++){
+                console.log(i,j)
+            }
+        }
+
+        for (i=1; i<=20; i++){
+            if (i==8)break
+            console.log(i)
+        }
+    </script>
+</body>
+
+</html>

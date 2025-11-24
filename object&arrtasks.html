@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>object tasks</p>
+    </div>
+    <script>
+        const arr = [10, 20, 30, 40, 50];
+        const reversed = arr.reduce((acc, item) => [item, ...acc], []);
+        console.log(reversed); // [50, 40, 30, 20, 10]
+
+        const arr2 = [1, 2, 3, 4, 5, 6, 7, 8]
+        function chunkArray(arr, n) {
+            if (arr.length === 0) return [];
+            const chunk = arr.slice(0, n);
+            const rest = arr.slice(n);
+            return [chunk, ...chunkArray(rest, n)];
+        }
+        // Example usage with n=3
+        const chunks = chunkArray(arr2, 3);
+        console.log(chunks); // [[1, 2, 3], [4, 5, 6], [7, 8]]
+
+
+        const userProfile = {
+            id: 101,
+            name: "John Doe",
+            settings: {
+                theme: "dark",
+                notifications: {
+                    email: true,
+                    sms: false,
+                },
+            },
+            posts: [
+                { id: 1, title: "Hello", comments: [{ text: "Nice post!" }] },
+                { id: 2, title: "World" },
+            ],
+            getStatus: () => "Active",
+        };
+
+        // 1. Get the user's preferred theme, default to "light" if missing.
+        const theme = userProfile.settings?.theme ?? "light";
+        console.log("Theme:", theme); // "dark"
+
+        // 2. Check if the user has SMS notifications enabled; default to false.
+        const smsEnabled = userProfile.settings?.notifications?.sms ?? false;
+        console.log("SMS Enabled:", smsEnabled); // false
+
+        // 3. Get the text of the first comment of the second post; default to "No comments".
+        const firstCommentText = userProfile.posts?.[1]?.comments?.[0]?.text ?? "No comments";
+        console.log("First Comment of Second Post:", firstCommentText); // "No comments" (since second post has no comments)
+        
+        // 4. Call the getStatus function safely; default to "Unknown" if missing.
+        const status = userProfile.getStatus?.() ?? "Unknown";
+        console.log("Status:", status); // "Active"
+        
+        // 5. Safely access a deeply nested field that doesn't exist (e.g., userProfile.settings.layout.mode); default to "standard".
+        const layoutMode = userProfile.settings?.layout?.mode ?? "standard";
+        console.log("Layout Mode:", layoutMode); // "standard"
+
+        const arr3 = [1, 2, 3, 4, 5, 6, 7, 8]
+        let [a,b,c,d,...others]=arr3
+        let parts=[
+            [a,b],
+            [c,d],
+            others
+        ]
+        console.log(parts)
+
+        let x
+        let y=x ??"value missing in x"
+        console.log(y)
+    </script>
+</body>
+
+</html>

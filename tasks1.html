@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>tasks 1-10</p>
+    </div>
+    <script>
+        // Browser: prompts the user and shows the area
+        const baseInput = prompt("Enter the base of the triangle:");
+        const heightInput = prompt("Enter the height of the triangle:");
+
+        const base = parseFloat(baseInput);
+        const height = parseFloat(heightInput);
+
+        if (Number.isNaN(base) || Number.isNaN(height) || base <= 0 || height <= 0) {
+            alert("Please enter valid positive numbers for base and height.");
+        } else {
+            const area = 0.5 * base * height;
+            alert(`The area of the triangle is ${area}.`);
+            console.log(`Base: ${base}, Height: ${height}, Area: ${area}`);
+        }
+
+
+        // Program to check if a number is even, odd, or divisible by 4
+
+        // Prompt the user to enter a number
+        let number = parseInt(prompt("Enter a number:"));
+
+        // Check if the number is divisible by 4
+        if (number % 4 == 0) {
+            console.log("divisible by 4");
+        } else if (number % 2 == 0) {
+            console.log("even");
+        } else {
+            console.log("odd");
+        }
+
+
+        // Program to validate and normalize Kenyan phone numbers
+
+        function normalizePhoneNumber(phone) {
+            // Remove any spaces or dashes
+            phone = phone.trim().replace(/[-\s]/g, "");
+
+            if (phone.startsWith("+254")) {
+                return phone; // Already in correct format
+            } else if (phone.startsWith("254")) {
+                return "+254" + phone.slice(3);
+            } else if (phone.startsWith("07")) {
+                return "+254" + phone.slice(1);
+            } else if (phone.startsWith("7")) {
+                return "+254" + phone;
+            } else if (phone.startsWith("01")) {
+                return "+254" + phone.slice(1);
+            } else if (phone.startsWith("1")) {
+                return "+254" + phone;
+            } else {
+                return "Invalid phone number format";
+            }
+        }
+        // Example usage with prompt
+        let input = prompt("Enter your phone number:");
+        let normalized = normalizePhoneNumber(input);
+        console.log(normalized);
+        alert(normalized);
+
+
+        // Program to validate an email address
+
+        function validateEmail(email) {
+            // Check if email contains both '@' and '.'
+            if (email.includes("@") && email.includes(".")) {
+                return "Valid email address";
+            } else {
+                return "Invalid email address";
+            }
+        }
+        // Example usage with prompt
+        let ema = prompt("Enter your email address:");
+        let result = validateEmail(ema);
+        console.log(result);
+        alert(result);
+
+
+
+        function getNumber(promptText) {
+            while (true) {
+                const s = prompt(promptText);
+                if (s === null) continue;
+                const n = parseFloat(s.trim());
+                if (!Number.isNaN(n)) return n;
+                alert("invalid input — please enter a number");
+            }
+        }
+        const a = getNumber("Enter first number:");
+        const b = getNumber("Enter second number:");
+        const c = getNumber("Enter third number:");
+
+        // find largest without Math.max
+        let largest = a;
+        if (b > largest) largest = b;
+        if (c > largest) largest = c;
+
+        alert("Largest: " + largest);
+        const CORRECT = "admin@123";
+        const MAX_ATTEMPTS = 4;
+        let attempts = 0;
+        let granted = false;
+
+        while (attempts < MAX_ATTEMPTS) {
+            const input = prompt("Enter password:");
+            // If user pressed Cancel treat as empty attempt
+            attempts++;
+            if (input === CORRECT) {
+                alert("Access granted");
+                granted = true;
+                break;
+            } else {
+                alert("Wrong password. Attempts left: " + (MAX_ATTEMPTS - attempts));
+            }
+        }
+
+        if (!granted) {
+            alert("Account blocked");
+        }
+
+
+        function getMark(promptText) {
+            while (true) {
+                const s = prompt(promptText);
+                if (s === null) continue; // re-prompt on Cancel
+                const str = s.trim();
+                // allow integers or floats like 75 or 75.5, reject other characters
+                if (!/^\d+(\.\d+)?$/.test(str)) {
+                    alert("Invalid input. Enter a number between 0 and 100.");
+                    continue;
+                }
+                const n = parseFloat(str);
+                if (n < 0 || n > 100) {
+                    alert("Invalid range. Enter a number between 0 and 100.");
+                    continue;
+                }
+                return n;
+            }
+        }
+
+        function gradeFromMark(mark) {
+            if (mark > 79) return "A";
+            if (mark >= 60) return "B";
+            if (mark >= 50) return "C";
+            if (mark >= 40) return "D";
+            return "E";
+        }
+        const mark = getMark("Enter student mark (0 - 100):");
+        const grade = gradeFromMark(mark);
+        alert("Mark: " + mark + "\nGrade: " + grade);
+
+        
+        function checkSpeed() {
+            const raw = prompt("Enter car speed (km/h):");
+            if (raw === null) return; // user cancelled
+            const s = raw.trim();
+            const speed = parseFloat(s);
+            if (Number.isNaN(speed)) {
+                alert("Please enter a valid number.");
+                return;
+            }
+
+            if (speed <= 70) {
+                alert("Ok");
+                return;
+            }
+
+            const points = Math.floor((speed - 70) / 5);
+            if (points > 12) {
+                alert("License suspended");
+            } else {
+                alert("Points: " + points);
+            }
+        }
+        checkSpeed();
+
+
+    </script>
+</body>
+
+</html>

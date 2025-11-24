@@ -10,29 +10,65 @@
         <p>conditional statements..</p>
     </div>
     <script>
-        let namba=Number(prompt("Enter a number!"))
-        if (namba%2==0){
-            console.log(`Even`)
-        }else{
-            console.log(`Odd`)
-        }
+        // let namba=Number(prompt("Enter a number!"))
+        // if (namba%2==0){
+        //     console.log(`Even`)
+        // }else{
+        //     console.log(`Odd`)
+        // }
 
         //comparing 3 inputs
-        let num1=Number(prompt("Enter 1st number"))
-        let num2=Number(prompt("Enter 2nd number"))
-        let num3=Number(prompt("Enter 3rd number"))
-        if (num1>num2 && num1>num3){
-            console.log(`num1 is largest`)
-        }else if (num2>num1 && num2>num3){
-            console.log(`num2 is largest`)
-        }else{
-            console.log(`num3 is largest`)
-        }
+        // let num1=Number(prompt("Enter 1st number"))
+        // let num2=Number(prompt("Enter 2nd number"))
+        // let num3=Number(prompt("Enter 3rd number"))
+        // if (num1>num2 && num1>num3){
+        //     console.log(`num1 is largest`)
+        // }else if (num2>num1 && num2>num3){
+        //     console.log(`num2 is largest`)
+        // }else{
+        //     console.log(`num3 is largest`)
+        // }
 
         //using ternary operator *for only one condition wen their is no else if
-        let age=Number(prompt("Enter your age"))
-        let checkage= (age>=18) ? "you can vote":"You can't vote"
-        console.log(checkage)
+        // let age=Number(prompt("Enter your age"))
+        // let checkage= (age>=18) ? "you can vote":"You can't vote"
+        // console.log(checkage)
+
+        // let year=Number(prompt("Enter year"))
+        // if (year%4==0 && year%100!==0){
+        //     console.log(`its a leap year`)
+        // }else if(year%400==0){
+        //     console.log(`its a leap year`)
+        // }else{
+        //     console.log(`its not a leap year`)
+        // }
+
+        // let temp=prompt("Enter temperature")
+        // if (temp>=30){
+        //     console.log(`the temperature is too high`)
+        // }else if (temp>=15 && temp<29){
+        //     console.log(`Normal temperature`)
+        // }else{
+        //     console.log(`cold temperature`)
+        // }
+
+        let value=Number(prompt("Guess a number"))
+        let value2=Number(prompt("Guess another number"))
+        if (value>10 && value<20){
+            console.log(`conditions met`)
+        }else if (value2>100){
+            console.log(`conditions met`)
+        }else{
+            console.log(`condition not met`)
+        }
+
+        let pass=prompt("Enter password")
+        let password="secret123"
+        if (pass==password){
+            console.log(`Access granted`)
+        }else{
+            console.log(`Access denied`)
+        }
     </script>
 </body>
 </html>
