@@ -12,7 +12,6 @@
         <p>tasks 1-10</p>
     </div>
     <script>
-        // Browser: prompts the user and shows the area
         const baseInput = prompt("Enter the base of the triangle:");
         const heightInput = prompt("Enter the height of the triangle:");
 
@@ -27,8 +26,6 @@
             console.log(`Base: ${base}, Height: ${height}, Area: ${area}`);
         }
 
-
-        // Program to check if a number is even, odd, or divisible by 4
 
         // Prompt the user to enter a number
         let number = parseInt(prompt("Enter a number:"));
@@ -45,12 +42,11 @@
 
         // Program to validate and normalize Kenyan phone numbers
 
-        function normalizePhoneNumber(phone) {
-            // Remove any spaces or dashes
-            phone = phone.trim().replace(/[-\s]/g, "");
+        function phoneNumber(phone) {
+            phone = phone.trim().replace("");
 
             if (phone.startsWith("+254")) {
-                return phone; // Already in correct format
+                return phone; 
             } else if (phone.startsWith("254")) {
                 return "+254" + phone.slice(3);
             } else if (phone.startsWith("07")) {
@@ -65,11 +61,10 @@
                 return "Invalid phone number format";
             }
         }
-        // Example usage with prompt
         let input = prompt("Enter your phone number:");
-        let normalized = normalizePhoneNumber(input);
-        console.log(normalized);
-        alert(normalized);
+        let normal = phoneNumber(input);
+        console.log(normal);
+        alert(normal);
 
 
         // Program to validate an email address
@@ -137,7 +132,6 @@
                 const s = prompt(promptText);
                 if (s === null) continue; // re-prompt on Cancel
                 const str = s.trim();
-                // allow integers or floats like 75 or 75.5, reject other characters
                 if (!/^\d+(\.\d+)?$/.test(str)) {
                     alert("Invalid input. Enter a number between 0 and 100.");
                     continue;
@@ -162,7 +156,7 @@
         const grade = gradeFromMark(mark);
         alert("Mark: " + mark + "\nGrade: " + grade);
 
-        
+
         function checkSpeed() {
             const raw = prompt("Enter car speed (km/h):");
             if (raw === null) return; // user cancelled
